@@ -1,14 +1,21 @@
 # Tiny Bear Cafe
 
+## Authors
+- Sirelin P
+- Liis R
+- Kristiina Marie P
+  
+## Technology
+- Java 21.0.6
+- LibGDX 1.13.1
+- KryoNet 2.24
+- Gradle 8.12.1
 
-### Mängu kirjeldus
-- Idee tulenes meie lemmikmängudest, nagu näiteks Stardew Valley, Penguin's Diner, Good Pizza Great Pizza. Me soovisime luua hubase ja armsa ajaviitemängu, mis pakub ka natuke intensiivsust tellimuste täitmise näol. 
-- Teemaks on kohvik, kus peategelane on armas karu, kelle vanaema kohvikut ähvardab sulgumine. Mängija peab töötama terve päeva, et saada kokku raha kohviku päästmiseks. Kui mängijal veab ja õnnestub raha kokku saada, siis on õnnelik lõpp. Kui aga mitte, siis on Game Over! 
-- Mäng on 2D pixel art stiilis. Kasutatud on pixel art asset packe, mis on saadud itch.io lehelt ning kooskõlas andmekaitseseadustega. Mängu AI komponent esineb kohviku klientide näol. AI klient sisenedes valib endale sobiva laua. Tellimuste täitmine toimub köögis, avaneb popup, kus on väike minigame vastavalt tellimusele. Võimalik on ka boonustena osta endale päeva lõpus upgrade, milleks on erinevad karu skinid. 
-- Kui aga on soov sõpradega mängida, siis saavad mänguga liituda sõbrad. Mängijate piiri pole, niikaua, kui TalTechi server kannatab (või localhost) :p
+### Running the project
+-  Copy the repository into IntelliJ (or your preferred IDE).
+-  
 
-
-### Mängimise juhend
+### Tutorial
 
 - How to play?
 - Move around with arrow keys: **↑ -> ↓ <-**
@@ -27,29 +34,25 @@
 - Press **Q** to close the tutorial. Press **ESC** to quit the game!
 
 
+## EST Overview
+### Mängu kirjeldus
+- Idee tulenes meie lemmikmängudest, nagu näiteks Stardew Valley, Penguin's Diner, Good Pizza Great Pizza. Me soovisime luua hubase ja armsa ajaviitemängu, mis pakub ka natuke intensiivsust tellimuste täitmise näol. 
+- Teemaks on kohvik, kus peategelane on armas karu, kelle vanaema kohvikut ähvardab sulgumine. Mängija peab töötama terve päeva, et saada kokku raha kohviku päästmiseks. Kui mängijal veab ja õnnestub raha kokku saada, siis on õnnelik lõpp. Kui aga mitte, siis on Game Over! 
+- Mäng on 2D pixel art stiilis. Kasutatud on pixel art asset packe, mis on saadud itch.io lehelt ning kooskõlas andmekaitseseadustega. Mängu AI komponent esineb kohviku klientide näol. AI klient sisenedes valib endale sobiva laua. Tellimuste täitmine toimub köögis, avaneb popup, kus on väike minigame vastavalt tellimusele. Võimalik on ka boonustena osta endale päeva lõpus upgrade, milleks on erinevad karu skinid. 
+- Kui aga on soov sõpradega mängida, siis saavad mänguga liituda sõbrad. Mängijate piiri pole, niikaua, kui TalTechi server kannatab (või localhost) :p
+
+
+
 
 ### Mängu ja serveri käivitamine lokaalselt
-- Copy HTTPS kaudu repositoorium IntelliJ IDEA programmi (Get from VCS)
-- Ava nii server kui ka client kaust uues aknas (File -> Open -> client _või_ server -> OK -> New Window)
+- Copy HTTPS kaudu repositoorium IntelliJ IDEA programmi (Get from VCS).
+- Ava nii server kui ka client kaust uues aknas (File -> Open -> client _või_ server -> OK -> New Window). Open 
 - Esimesena jooksuta server projekt (server/src/main/java/ee/taltech/cafegame/serverMain.java -> Gradle -> Tasks -> Build -> Build
 - Siis ava server Gradle -> Tasks -> Application -> run
 - Teisena kliendi projekt (client/core/src/main/java/ee/taltech/cafegame/clientMain.java -> Gradle -> Tasks -> Build -> Build
 - Ava klient Gradle -> Tasks -> Application -> run
 - Mitme kliendi lubamiseks tuleb IntelliJ’s lubada mitme eksemplari jooksutamine (Run -> Debug Configurations -> Edit Configurations -> Modify options -> Allow multiple instances)
 - Seejärel saad uuest jooksutada kliendi faili ning avaneb teine klient.
-
-### Mängu kliendi käivitamine ja TalTech serveriga liitumine
-- Copy HTTPS kaudu repositoorium IntelliJ IDEA programmi (Get from VCS)
-- Ava client kaust uues aknas (File -> Open -> client -> OK -> New Window)
-- Jooksuta kliendi projekt (client/core/src/main/java/ee/taltech/cafegame/clientMain.java -> Gradle -> Tasks -> Build -> Build
-- Muuda klassis clientMain.java (asukoht `client/core/src/main/java/ee/taltech/cafegame/clientMain.java`) server aadressi rida "localhost"-ist serveri IP-aadressiks "193.40.255.19", rida 27: 
-`private static final String SERVER_ADDRESS = "localhost";` 
--> 
-`private static final String SERVER_ADDRESS = "193.40.255.19";`
-- Ava klient Gradle -> Tasks -> Application -> run
-- Mitme kliendi lubamiseks tuleb IntelliJ’s lubada mitme eksemplari jooksutamine (Run -> Debug Configurations -> Edit Configurations -> Modify options -> Allow multiple instances)
-- Seejärel saad uuest jooksutada kliendi faili ning avaneb teine klient.
-
 
 ### Kasutatud tehnoloogiate loetelu
 - Java 21.0.6
