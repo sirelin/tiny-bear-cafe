@@ -1,0 +1,29 @@
+menuSkin.png
+size:1024,256
+repeat:none
+chatbubble
+bounds:2,18,72,61
+label
+bounds:2,158,385,80
+label1
+bounds:2,81,382,75
+menu gui_J32T
+bounds:482,80,31,16
+menu gui_c_H5
+bounds:1005,222,17,16
+menu gui_hMfN
+bounds:642,104,8,9
+menu gui_x5k2
+bounds:386,2,94,94
+question
+bounds:76,23,55,56
+tile1
+bounds:888,120,115,118
+tile2
+bounds:642,115,121,123
+tile3
+bounds:517,104,123,134
+tile4
+bounds:765,115,121,123
+tile5
+bounds:389,98,126,140
